@@ -10,7 +10,7 @@ unique_vals = df['Color'].unique()
 hot = pd.DataFrame()
 
 for val in unique_vals:
-    one_hot[val] = [1 if x == val else 0 for x in df['Color']]
+    hot[val] = [1 if x == val else 0 for x in df['Color']]
 
-final_df = pd.concat([df, one_hot], axis=1)
+final_df = pd.concat([df, hot], axis=1)
 print(final_df)
